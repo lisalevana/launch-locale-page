@@ -34,13 +34,13 @@ const Navbar = () => {
   return (
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white/90 backdrop-blur-sm shadow-sm' : 'bg-transparent'
+        isScrolled ? 'bg-agency-dark/80 backdrop-blur-lg' : 'bg-transparent'
       }`}
     >
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <a href="#home" className="flex items-center">
-            <span className="text-2xl font-bold font-display text-agency-primary">AdAgency</span>
+            <span className="text-2xl font-bold font-display text-white">AdAgency</span>
           </a>
 
           {/* Desktop Navigation */}
@@ -49,7 +49,7 @@ const Navbar = () => {
               <a
                 key={item.href}
                 href={item.href}
-                className="text-gray-800 hover:text-agency-primary transition-colors font-medium"
+                className="text-white/80 hover:text-white transition-colors font-medium"
               >
                 {item.label}
               </a>
@@ -57,7 +57,7 @@ const Navbar = () => {
             <Button
               onClick={toggleLanguage}
               variant="outline"
-              className="ml-4 text-agency-primary border-agency-primary hover:bg-agency-primary hover:text-white"
+              className="ml-4 text-white border-white/20 bg-white/10 hover:bg-white/20 backdrop-blur-sm"
               size="sm"
             >
               {language === 'en' ? 'PT' : 'EN'}
@@ -69,14 +69,14 @@ const Navbar = () => {
             <Button 
               onClick={toggleLanguage} 
               variant="outline" 
-              className="mr-2 text-agency-primary border-agency-primary hover:bg-agency-primary hover:text-white"
+              className="mr-2 text-white border-white/20 bg-white/10 hover:bg-white/20"
               size="sm"
             >
               {language === 'en' ? 'PT' : 'EN'}
             </Button>
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="p-2 text-gray-800"
+              className="p-2 text-white"
             >
               {isMobileMenuOpen ? (
                 <X size={24} />
@@ -90,7 +90,7 @@ const Navbar = () => {
 
       {/* Mobile menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-white/95 backdrop-blur-sm shadow-lg">
+        <div className="md:hidden bg-agency-dark/95 backdrop-blur-lg">
           <div className="container mx-auto px-4 py-4">
             <nav className="flex flex-col items-center gap-4">
               {navItems.map((item) => (
@@ -98,7 +98,7 @@ const Navbar = () => {
                   key={item.href}
                   href={item.href}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="text-gray-800 hover:text-agency-primary transition-colors py-2 font-medium"
+                  className="text-white/80 hover:text-white transition-colors py-2 font-medium"
                 >
                   {item.label}
                 </a>
