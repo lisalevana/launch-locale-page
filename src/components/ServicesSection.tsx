@@ -15,11 +15,11 @@ const ServiceCard = ({
   delay?: number;
 }) => (
   <div className="bg-white rounded-lg shadow-sm p-6 animate-on-scroll" style={{ transitionDelay: `${delay}ms` }}>
-    <div className="bg-agency-light/50 w-14 h-14 rounded-lg flex items-center justify-center mb-4">
-      <Icon size={24} className="text-agency-primary" />
+    <div className="bg-[#E6F2FF] w-14 h-14 rounded-lg flex items-center justify-center mb-4">
+      <Icon size={24} className="text-[#2C5282]" />
     </div>
-    <h3 className="text-xl font-bold mb-3 text-agency-dark">{title}</h3>
-    <p className="text-gray-600">{description}</p>
+    <h3 className="text-xl font-bold mb-3 text-[#1A365D]">{title}</h3>
+    <p className="text-[#4A5568]">{description}</p>
   </div>
 );
 
@@ -53,13 +53,13 @@ const ServicesSection = () => {
   }, []);
 
   return (
-    <section id="services" ref={sectionRef} className="py-16 md:py-24">
+    <section id="services" ref={sectionRef} className="bg-[#F7FAFC] py-16 md:py-24">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold font-display mb-6 text-agency-dark animate-on-scroll">
+          <h2 className="text-3xl md:text-4xl font-bold font-display mb-6 text-[#1A365D] animate-on-scroll">
             {t('services.title')}
           </h2>
-          <div className="w-16 h-1 bg-agency-primary mx-auto animate-on-scroll"></div>
+          <div className="w-16 h-1 bg-[#2C5282] mx-auto animate-on-scroll"></div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
